@@ -10,6 +10,11 @@
     input:focus {
       background-color: yellow;
     }
+    label{
+      display: inline-block;
+      text-align: left;
+      width: 33%;
+    }
     </style>
   </head>
   <body>
@@ -18,12 +23,13 @@
         <legend>Personal Information</legend>
           <label for = "name">Name:</label>
           <input type="text" id = "name" name="name" value="Matt">
-          <label>Email:<input type="email" name="email" value="" placeholder="a@b.com"></label>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" value="" placeholder="a@b.com">
           <label for="dob">DOB:</label>
           <input type="date" id="dob" name="dob" value="">
-          <label for="phone">
-          <input type="tel" id="phone" name="phone" value="">
-          <label for="color">
+          <label for="phone">Phone:</label>
+          <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="phone" name="phone" value="">
+          <label for="color">Color:</label>
           <input type="color" id="color" name="color" value="">
           <input type="submit" name="submit" value="Click Me!">
       </fieldset>
